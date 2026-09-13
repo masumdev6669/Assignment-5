@@ -22,52 +22,56 @@ const badgeColorMap: Record<string, string> = {
 };
 
 const AvailableTechnologies = ({ technologies }: AvailableTechnologiesProps) => {
-
   const [stack, setStack] = useState<ITechnologies[]>([]);
 
   const addToStack = (tech: ITechnologies) => {
-    
+    // Check if already in stack
     if (stack.find((item) => item.name === tech.name)) {
       toast.warning(`${tech.name} is already in your stack!`);
       return;
     }
     setStack([...stack, tech]);
-    toast.success(`${tech.name} added to your stack!`);
+    toast.success(`${tech.name} added to stack!`);
   };
 
   const removeFromStack = (techName: string) => {
     setStack(stack.filter((item) => item.name !== techName));
-    toast.info(`${techName} removed from your stack.`);
+    toast.info(`${techName} removed from stack.`);
   };
 
   const removeAll = () => {
     setStack([]);
-    toast.error('All technologies removed from your stack!');
+    toast.error('All technologies removed!');
   };
 
   return (
     <div className="p-8 md:p-12 bg-white">
       <div className="mb-10">
-     
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+          Explore the <span className="text-pink-500">Technologies</span>
+        </h1>
+        <p className="text-gray-500 text-sm md:text-base">
+          Pick one technology per category to build your ideal stack.
+        </p>
       </div>
 
       <div className="flex flex-col lg:flex-row gap-8 max-w-7xl mx-auto">
         
-        {/* Left Side: Technologies Grid */}
         <div className="lg:w-3/4">
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
             {technologies.map((tech) => {
               const badgeStyle = badgeColorMap[tech.badge] || 'bg-blue-50 text-blue-500';
-              
               const isInStack = stack.some((item) => item.name === tech.name);
 
               return (
                 <div 
                   key={tech.name} 
-                  className="bg-white rounded-xl border border-gray-100 p-5 shadow-[0_2px_10px_-3px_rgba(0,0,0,0.05)] flex flex-col"
+                  className={`bg-white rounded-xl p-5 shadow-sm flex flex-col transition-all ${
+                    isInStack ? 'border border-black' : 'border border-gray-100'
+                  }`}
                 >
                   <div className="flex justify-between items-start mb-4">
-                    <img src={tech.image} alt={tech.name} className="w-14 h-8 object-contain" />
+                    <img src={tech.image} alt={tech.name} className="w-8 h-8 object-contain" />
                     <span className={`text-[11px] font-semibold px-2.5 py-1 rounded-full ${badgeStyle}`}>
                       {tech.badge}
                     </span>
@@ -86,7 +90,6 @@ const AvailableTechnologies = ({ technologies }: AvailableTechnologiesProps) => 
                     </div>
                   </div>
 
-
                   <button 
                     onClick={() => addToStack(tech)}
                     disabled={isInStack}
@@ -104,15 +107,13 @@ const AvailableTechnologies = ({ technologies }: AvailableTechnologiesProps) => 
           </div>
         </div>
 
-        {/* Right Side: Your Stack Sidebar */}
         <div className="lg:w-1/4">
-          <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm sticky top-6">
+          <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm sticky top-24">
             <h3 className="text-lg font-bold text-gray-900 mb-1">Your Stack</h3>
             <p className="text-xs text-gray-500 mb-6">
               {stack.length} {stack.length === 1 ? 'Technology' : 'Technologies'} Selected
             </p>
 
-            {/* List of selected items */}
             <div className="space-y-3 mb-6">
               {stack.map((tech) => (
                 <div key={tech.name} className="flex items-center justify-between border border-gray-200 rounded-lg p-3">
@@ -135,14 +136,12 @@ const AvailableTechnologies = ({ technologies }: AvailableTechnologiesProps) => 
               ))}
             </div>
 
-            
             {stack.length === 0 && (
               <div className="border-2 border-dashed border-gray-200 rounded-xl p-8 flex items-center justify-center min-h-[120px]">
                 <p className="text-xs text-gray-400 text-center">Your stack is empty.</p>
               </div>
             )}
 
-            {/* Remove All Button */}
             {stack.length > 0 && (
               <button 
                 onClick={removeAll}

@@ -4,7 +4,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 const Nav = () => {
   return (
-    <nav className="flex justify-between items-center mt-5 container mx-auto px-4">
+    <nav className="sticky top-0 z-50 bg-white flex justify-between items-center py-4 container mx-auto px-4">
       <img src={Logo} alt="Dev Stack Logo" className="w-32" />
 
       <ul className="hidden md:flex gap-5">
@@ -15,13 +15,11 @@ const Nav = () => {
         <li><a href="">Contact</a></li>
       </ul>
 
-      {/* Desktop Buttons (Hidden on mobile) */}
       <div className="hidden md:flex gap-4 items-center">
         <button>Sign in</button>
         <button className="btn btn-secondary rounded-2xl text-white">Sign Up</button>
       </div>
 
-      {/* Mobile Menu Button (Hidden on desktop) */}
       <button className="md:hidden text-2xl text-gray-700">
         <FontAwesomeIcon icon={faBars} />
       </button>
