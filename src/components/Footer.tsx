@@ -5,7 +5,7 @@ const Footer = () => {
         <footer className="container mx-auto px-4 py-10 mt-10">
             <div className="flex flex-col md:flex-row justify-between gap-10">
                 
-                {/* Left Section: Logo and Description */}
+                {/* Left Section */}
                 <div className="w-full md:w-1/3">
                     <img src={Logo} alt="Dev Stack Logo" className="w-32" />
                     <p className="mt-4 text-gray-600 text-sm">
@@ -18,7 +18,7 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                {/* Right Section: Link Columns (Grid on mobile, Flex on desktop) */}
+                {/* Right Section*/}
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 w-full md:w-2/3 md:justify-items-end">
                     
                     <div className="space-y-3">

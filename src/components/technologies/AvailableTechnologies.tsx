@@ -1,5 +1,5 @@
-
 import { useState } from 'react';
+import { toast } from 'react-toastify';
 import type { ITechnologies } from '../../types/technologies';
 
 interface AvailableTechnologiesProps {
@@ -25,21 +25,24 @@ const AvailableTechnologies = ({ technologies }: AvailableTechnologiesProps) => 
 
   const [stack, setStack] = useState<ITechnologies[]>([]);
 
-
   const addToStack = (tech: ITechnologies) => {
-    if (!stack.find((item) => item.name === tech.name)) {
-      setStack([...stack, tech]);
+    
+    if (stack.find((item) => item.name === tech.name)) {
+      toast.warning(`${tech.name} is already in your stack!`);
+      return;
     }
+    setStack([...stack, tech]);
+    toast.success(`${tech.name} added to your stack!`);
   };
 
-  
   const removeFromStack = (techName: string) => {
     setStack(stack.filter((item) => item.name !== techName));
+    toast.info(`${techName} removed from your stack.`);
   };
 
-  
   const removeAll = () => {
     setStack([]);
+    toast.error('All technologies removed from your stack!');
   };
 
   return (
@@ -132,14 +135,14 @@ const AvailableTechnologies = ({ technologies }: AvailableTechnologiesProps) => 
               ))}
             </div>
 
-            {/* Empty State Box (only shows if stack is empty) */}
+            
             {stack.length === 0 && (
               <div className="border-2 border-dashed border-gray-200 rounded-xl p-8 flex items-center justify-center min-h-[120px]">
                 <p className="text-xs text-gray-400 text-center">Your stack is empty.</p>
               </div>
             )}
 
-            {/* Remove All Button (only shows if there are items) */}
+            {/* Remove All Button */}
             {stack.length > 0 && (
               <button 
                 onClick={removeAll}
