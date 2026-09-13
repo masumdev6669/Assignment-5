@@ -1,0 +1,133 @@
+[
+  {
+    "name": "React",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZoHXu9r19UIOR3pcOGGZnRQbaWkpMV3Cn9X38zIkUyg&s=10"       ,
+    "description": "A declarative, component-based JavaScript library for building modern user interfaces.",
+    "category": "Frontend",
+    "level": "Beginner-Friendly",
+    "rating": 4.9,
+    "badge": "Popular"
+
+  },
+  {
+
+    "name": "Vue.js",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsb7l8z_HJzujPmmP6AMkxxbHsPE-J9pA3zx6Pt7T6hQ&s=10",
+    "description": "An approachable, performant, and versatile framework for building web user interfaces.",
+    "category": "Frontend",
+    "level": "Beginner-Friendly",
+    "rating": 4.8,
+    "badge": "Versatile"
+
+  },
+  {
+   
+    "name": "Svelte",
+    "image": "https://avatars.githubusercontent.com/u/23617963?s=280&v=4",
+    "description": "Cybernetically enhanced web apps with compile-time reactivity and zero virtual DOM overhead.",
+    "category": "Frontend",
+    "level": "Intermediate",
+    "rating": 4.8,
+    "badge": "Fast"
+
+  },
+  {
+
+    "name": "Next.js",
+    "image": "https://www.drupal.org/files/project-images/nextjs-icon-dark-background.png",
+    "description": "The React framework for full-stack web applications with hybrid static and server rendering.",
+    "category": "Frontend",
+    "level": "Intermediate",
+    "rating": 4.9,
+    "badge": "SSR / Edge"
+
+  },
+  {
+
+    "name": "Node.js",
+    "image": "https://www.edureka.co/blog/wp-content/uploads/2019/08/node-logo.png",
+    "description": "An asynchronous event-driven JavaScript runtime built on Chrome's V8 engine.",
+    "category": "Backend",
+    "level": "Intermediate",
+    "rating": 4.8,
+    "badge": "Standard"
+  
+  },
+  {
+  
+    "name": "PostgreSQL",
+    "image": "https://miro.medium.com/0*epnKnkKuLx2RAajt",
+    "description": "A powerful, open-source object-relational database system with proven reliability.",
+    "category": "Database",
+    "level": "Intermediate",
+    "rating": 4.9,
+    "badge": "Top SQL"
+
+  },
+  {
+
+    "name": "Redis",
+    "image": "https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/11358033/cover_image/retina_1708x683/redis-1-768x512-cd07baee06bf2cf8fb8f0389203b71bb.png",
+    "description": "In-memory data structure store used as a high-speed database, cache, and message broker.",
+    "category": "Database",
+    "level": "Intermediate",
+    "rating": 4.8,
+    "badge": "Cache"
+
+  },
+  {
+
+    "name": "JavaScript",
+    "image": "https://tapggc.org/_astro/JavaScript.DqTIRvVi.png",
+    "description": "The versatile, ubiquitous scripting language powering dynamic behavior across the web.",
+    "category": "Language",
+    "level": "Beginner-Friendly",
+    "rating": 4.9,
+    "badge": "Ubiquitous"
+
+  },
+  {
+
+    "name": "TypeScript",
+    "image": "https://www.datocms-assets.com/148875/1775816397-typescript-logo.png?auto=format&fit=max&w=1200",
+    "description": "A strongly typed programming language that builds on JavaScript for robust tooling.",
+    "category": "Language",
+    "level": "Intermediate",
+    "rating": 4.9,
+    "badge": "Essential"
+ 
+  },
+  {
+
+    "name": "Java",
+    "image": "https://logolook.net/wp-content/uploads/2022/11/Java-Logo.png",
+    "description": "A secure, object-oriented programming language designed for portability and scale.",
+    "category": "Language",
+    "level": "Intermediate",
+    "rating": 4.6,
+    "badge": "Robust"
+
+  },
+  {
+  
+    "name": "Tailwind CSS",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/960px-Tailwind_CSS_Logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+    "description": "A utility-first CSS framework packed with classes that can be composed to build custom UI.",
+    "category": "Styling",
+    "level": "Beginner-Friendly",
+    "rating": 4.9,
+    "badge": "Modern"
+
+  },
+  {
+
+    "name": "Docker",
+    "image": "https://ms-azuretools.gallerycdn.vsassets.io/extensions/ms-azuretools/vscode-docker/2.0.0/1748459272971/Microsoft.VisualStudio.Services.Icons.Default",
+    "description": "A platform designed to build, share, and run containerized applications reliably.",
+    "category": "DevOps",
+    "level": "Intermediate",
+    "rating": 4.9,
+    "badge": "Containers"
+
+  }
+]

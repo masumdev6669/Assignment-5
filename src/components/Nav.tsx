@@ -6,7 +6,7 @@ const Nav = () => {
          <nav className=" flex justify-between mt-5 container mx-auto">
                <img src={Logo} alt="" />
                <ul className="flex gap-5">
-                <li><a href="">Home</a></li>
+                <li className="text-[#DB2777]"><a href="">Home</a></li>
                 <li><a href="">Technologies</a></li>
                 <li><a href="">Projects</a></li>
                 <li><a href="">About</a></li>

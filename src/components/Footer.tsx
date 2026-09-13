@@ -8,7 +8,7 @@ const Footer = () => {
                      <img src={Logo} alt="" />
 
                      <p className="mt-4">Curated tools, technologies, and resources for developers building modern software.</p>
-                     <ul className="flex gap-5 mt-5 font-bold">
+                     <ul className="flex gap-5 mt-5 font-semibold">
                         <li><a href="">Github</a></li>
                         <li><a href="">Twitter</a></li>
                         <li><a href="">Linkedin</a></li>
