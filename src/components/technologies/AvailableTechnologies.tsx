@@ -18,26 +18,26 @@ const badgeColorMap: Record<string, string> = {
   'Robust': 'bg-blue-50 text-blue-500',
   'Modern': 'bg-cyan-50 text-cyan-600',
   'Containers': 'bg-cyan-50 text-cyan-600',
-  'SSR / Edge': 'bg-purple-50 text-purple-500', // Added for Next.js
+  'SSR / Edge': 'bg-purple-50 text-purple-500',
 };
 
 const AvailableTechnologies = ({ technologies }: AvailableTechnologiesProps) => {
-  // 1. Create state to hold the selected stack
+
   const [stack, setStack] = useState<ITechnologies[]>([]);
 
-  // 2. Function to add a tech to the stack (prevents duplicates)
+
   const addToStack = (tech: ITechnologies) => {
     if (!stack.find((item) => item.name === tech.name)) {
       setStack([...stack, tech]);
     }
   };
 
-  // 3. Function to remove a single tech
+  
   const removeFromStack = (techName: string) => {
     setStack(stack.filter((item) => item.name !== techName));
   };
 
-  // 4. Function to remove all techs
+  
   const removeAll = () => {
     setStack([]);
   };
@@ -55,7 +55,7 @@ const AvailableTechnologies = ({ technologies }: AvailableTechnologiesProps) => 
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
             {technologies.map((tech) => {
               const badgeStyle = badgeColorMap[tech.badge] || 'bg-blue-50 text-blue-500';
-              // Check if this item is already in the stack
+              
               const isInStack = stack.some((item) => item.name === tech.name);
 
               return (
@@ -83,7 +83,7 @@ const AvailableTechnologies = ({ technologies }: AvailableTechnologiesProps) => 
                     </div>
                   </div>
 
-                  {/* Button changes based on whether it's in the stack */}
+
                   <button 
                     onClick={() => addToStack(tech)}
                     disabled={isInStack}
