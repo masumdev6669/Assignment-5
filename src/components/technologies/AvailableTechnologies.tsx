@@ -47,12 +47,7 @@ const AvailableTechnologies = ({ technologies }: AvailableTechnologiesProps) => 
   return (
     <div className="p-8 md:p-12 bg-white">
       <div className="mb-10">
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
-          Explore the <span className="text-pink-500">Technologies</span>
-        </h1>
-        <p className="text-gray-500 text-sm md:text-base">
-          Pick one technology per category to build your ideal stack.
-        </p>
+        
       </div>
 
       <div className="flex flex-col lg:flex-row gap-8 max-w-7xl mx-auto">
