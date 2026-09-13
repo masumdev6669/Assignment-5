@@ -64,7 +64,7 @@ const AvailableTechnologies = ({ technologies }: AvailableTechnologiesProps) => 
                   className="bg-white rounded-xl border border-gray-100 p-5 shadow-[0_2px_10px_-3px_rgba(0,0,0,0.05)] flex flex-col"
                 >
                   <div className="flex justify-between items-start mb-4">
-                    <img src={tech.image} alt={tech.name} className="w-8 h-8 object-contain" />
+                    <img src={tech.image} alt={tech.name} className="w-14 h-8 object-contain" />
                     <span className={`text-[11px] font-semibold px-2.5 py-1 rounded-full ${badgeStyle}`}>
                       {tech.badge}
                     </span>
