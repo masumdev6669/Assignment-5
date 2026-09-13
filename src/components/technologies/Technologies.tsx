@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import type { ITechnologies } from '../../types/technologies';
 import AvailableTechnologies from './AvailableTechnologies';
 
